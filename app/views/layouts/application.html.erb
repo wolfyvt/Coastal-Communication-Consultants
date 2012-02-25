@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
+<head>
+  <title>Coastal Communication Consultants</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <center><%= image_tag("ccc-logo-extended.png") %></center>
+ 
+  <div class="ccc-sub-title">
+      <h1>Speech Language Therapy in Charleston, SC</h1>
+  </div>
+</div>
+
+<div class="container ccc-nav-pad">
+  <div class="navbar">
+      <div class="navbar-inner ccc-nav">
+        <div class="container">
+          <a class="brand" href="#"><%= image_tag("CCC-brand.png", ) %></a>
+          
+          <ul class="nav">
+              <li class="active ccc-nav-active">
+                <a href="#">Home</a>
+              </li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+      </div>
+  </div>  
+ 
+
+  <%= yield %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$cccblue: #66d8fd;
+
+body {
+  position: relative;
+  padding-top: 55px;
+  background-color: #6ea2b3;
+  background-image: url(CCC-bg2.png);
+  background-repeat: repeat-x;
+}
+
+.ccc-sub-title {
+  position: relative;
+}
+
+.ccc-sub-title h1 {
+  color: darken($cccblue, 35%);
+  font-family: "Omnibus-Type";
+  text-align: center;
+}
+
+.ccc-nav-pad {
+ padding-top: 33px;
+ }
+
+.ccc-nav {
+  background: darken($cccblue, 35%);
+}
+
+.ccc-nav-active {
+  background-color: lighten($cccblue, 5%);
+}
+
