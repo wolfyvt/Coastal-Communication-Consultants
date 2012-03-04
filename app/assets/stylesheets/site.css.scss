@@ -3,12 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $cccblue: #66d8fd;
+$ccclight: #fefbf6;
 
 body {
   position: relative;
   padding-top: 55px;
   background-color: #6ea2b3;
-  background-image: url(CCC-bg2.png);
+  background-image: url(CCC-bg3.png);
   background-repeat: repeat-x;
 }
 
@@ -22,15 +23,60 @@ body {
   text-align: center;
 }
 
+.ccc-list-head h2{
+  color: darken($cccblue, 35%);
+  font-family: "Omnibus-Type";
+}
+
 .ccc-nav-pad {
  padding-top: 33px;
  }
 
 .ccc-nav {
   background: darken($cccblue, 35%);
+  font-family: "Omnibus-Type";
+  font-size: 20px;
+  font-weight: bold;
+  color: $ccclight;
 }
 
 .ccc-nav-active {
   background-color: lighten($cccblue, 5%);
 }
 
+.trans-well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+ // border: 2px solid $ccclight;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.trans-well blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.trans-well h1 {
+ color: $ccclight;
+ //color: darken($cccblue, 35%);
+}
+
+.trans-well h2 {
+ color: $ccclight;
+ //color: darken($cccblue, 35%);
+}
+
+.trans-well h3 {
+ color: $ccclight;
+ //color: darken($cccblue, 35%);
+}
+
+.ccc-list ul
+{
+list-style-image: url('R_arrow2.png');
+}

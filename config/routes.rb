@@ -9,7 +9,11 @@ CoastalCommunicationConsultants::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+  match '/about' => 'site#about'
+  match '/contact' => 'site#contact'
+  match '/resources' => 'site#resources'
+  match '/services' => 'site#services'
+  
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

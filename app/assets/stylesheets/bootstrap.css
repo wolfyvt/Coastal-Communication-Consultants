@@ -9,6 +9,8 @@
  */
 
 
+
+
 article,
 aside,
 details,
@@ -2104,7 +2106,7 @@ button.btn.small, input[type="submit"].btn.small {
   font-size: 11px;
   font-weight: bold;
   line-height: 18px;
-  color: #999999;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .nav-list > li + .nav-header {
@@ -2409,7 +2411,7 @@ button.btn.small, input[type="submit"].btn.small {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 8px 20px 4px;
+  padding: 8px 50px 4px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
@@ -2533,7 +2535,7 @@ button.btn.small, input[type="submit"].btn.small {
   float: none;
   padding: 10px 10px 11px;
   line-height: 19px;
-  color: #999999;
+  color: #fefbf6;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
