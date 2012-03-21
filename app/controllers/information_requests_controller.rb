@@ -59,7 +59,6 @@ class InformationRequestsController < ApplicationController
   # PUT /information_requests/1
   # PUT /information_requests/1.json
   def update
-    puts "UUUUUUUUUUUUUUUUUUUlUUU"
     @information_request = InformationRequest.find(params[:id])
 
     respond_to do |format|

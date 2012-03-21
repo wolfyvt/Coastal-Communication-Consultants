@@ -1,4 +1,6 @@
 CoastalCommunicationConsultants::Application.routes.draw do
+  resources :faqs
+
   resources :information_requests
 
   # The priority is based upon order of creation:

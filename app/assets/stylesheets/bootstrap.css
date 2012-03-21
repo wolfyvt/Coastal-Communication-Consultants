@@ -11,6 +11,7 @@
 
 
 
+
 article,
 aside,
 details,
@@ -352,9 +353,9 @@ h6 {
   text-transform: uppercase;
 }
 .page-header {
-  padding-bottom: 17px;
-  margin: 18px 0;
-  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 8px;
+  margin: 12px 0;
+  border-bottom: 1px solid #66d8fd;
 }
 .page-header h1 {
   line-height: 1;

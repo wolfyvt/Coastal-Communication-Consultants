@@ -1,0 +1,39 @@
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="well">
+
+        <h1>Listing FAQS</h1>
+            <table class="table table-bordered table-striped">
+
+
+
+  <tr>
+    <th>Question</th>
+    <th>Answer</th>
+    <th>Order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @faqs.each do |faq| %>
+  <tr>
+    <td><%= faq.question %></td>
+    <td><%= faq.answer %></td>
+    <td><%= faq.order_index %></td>
+    <td><%= link_to 'Show', faq %></td>
+    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
+    <td><%= link_to 'Destroy', faq, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Faq', new_faq_path %>
+      </div>
+    </div>
+  </div>
+</div>
