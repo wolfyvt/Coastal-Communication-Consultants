@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="well">
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <b>Submitter name:</b>
+          <%= @information_request.submitter_name %>
+        </p>
+
+        <p>
+          <b>Patient name:</b>
+          <%= @information_request.patient_name %>
+        </p>
+
+        <p>
+          <b>Email address:</b>
+          <%= @information_request.email_address %>
+        </p>
+
+        <p>
+          <b>Phone number:</b>
+          <%= @information_request.phone_number %>
+        </p>
+
+        <%= link_to 'Back', information_requests_path %>
+      </div>
+    </div>
+  </div>
+</div>

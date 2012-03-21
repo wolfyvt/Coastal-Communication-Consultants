@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  submitter_name: MyString
+  patient_name: MyString
+  email_address: MyString
+  phone_number: MyString
+
+two:
+  submitter_name: MyString
+  patient_name: MyString
+  email_address: MyString
+  phone_number: MyString

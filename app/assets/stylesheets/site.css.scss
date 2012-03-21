@@ -44,9 +44,16 @@ body {
   background-color: lighten($cccblue, 5%);
 }
 
+.ccc-form-well {
+  padding-bottom: 0px;
+}
+
 .trans-well {
   min-height: 20px;
-  padding: 19px;
+  padding-top: 45px;
+  padding-bottom: 19px;
+  padding-left: 19px;
+  padding-right: 19px;
   margin-bottom: 20px;
  // border: 2px solid $ccclight;
   -webkit-border-radius: 4px;

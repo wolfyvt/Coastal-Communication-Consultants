@@ -1,4 +1,6 @@
 CoastalCommunicationConsultants::Application.routes.draw do
+  resources :information_requests
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -13,6 +15,9 @@ CoastalCommunicationConsultants::Application.routes.draw do
   match '/contact' => 'site#contact'
   match '/resources' => 'site#resources'
   match '/services' => 'site#services'
+  match '/requestInfo' => 'site#process_info_request'
+  match '/map' => 'site#map'
+  match '/updatefollowup' => 'information_requests#updatefollowup'
   
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

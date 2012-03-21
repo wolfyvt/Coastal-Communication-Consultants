@@ -1,3 +1,6 @@
+<% if notice != nil %>
+  <p class="alert"><%= notice %></p>
+<% end %>
 
 <div class="row">
   <div class="span7" style="vertical-align: middle">
@@ -55,21 +58,17 @@
      </div> 
    </div>
    <div class="span4">
-     <div class="well">
+     <div class="well ccc-form-well">
        <div class="ccc-list-head">
          <h2>Request Information:</h2>
        </div>
-       <h4>
-       <form action="Post">
-         Name: <input type="text" name="name">
-         Email: <input type="text" name="email">
-         <input type="submit">         
-       </form>
-       </h4>
-     </div>  
-     </div>
+       
+       
+       <%= render :partial => "information_requests/form", :locals => {:information_request => InformationRequest.new} %>
+       
+    </div>
+   
    </div>
-  </div>
 </div>
  
     

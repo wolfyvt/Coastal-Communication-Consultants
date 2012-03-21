@@ -1,0 +1,35 @@
+<%= form_for(information_request) do |f| %>
+  <% if information_request.errors.any? %>
+    
+   <div id="error_explanation">
+      <h2><%= pluralize(information_request.errors.count, "error") %> prohibited this information_request from being saved:</h2>
+
+      <ul>
+      <% information_request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h5>
+  <div class="field">
+    Your Name:<br />
+    <%= f.text_field :submitter_name %>
+  </div>
+  <div class="field">
+    Patient's Name<br />
+    <%= f.text_field :patient_name %>
+  </div>
+  <div class="field">
+    Contact Email:<br />
+    <%= f.email_field :email_address %>
+  </div>
+  <div class="field">
+    Contact Phone Number:<br />
+    <%= f.telephone_field :phone_number %>
+  </div>
+  </h5>
+  <div class="actions">
+    <%= f.submit :onclick => "return confirm('This will send the form information to CCC in order to contact you.  Please confirm this action.')" %>
+  </div>
+<% end %>

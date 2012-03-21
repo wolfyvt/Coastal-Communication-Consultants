@@ -1,0 +1,2 @@
+module InformationRequestsHelper
+end

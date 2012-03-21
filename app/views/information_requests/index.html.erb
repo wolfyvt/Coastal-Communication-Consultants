@@ -1,0 +1,39 @@
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="well">
+
+        <h1>Listing Information Requests</h1>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>Link</th>
+                <th>Submitter name</th>
+                <th>Patient name</th>
+                <th>Email address</th>
+                <th>Phone number</th>
+                <th>Date/Time of Request</th>
+                <th></th>
+              </tr>
+
+            <% @information_requests.each do |information_request| %>
+              <% msg_body = "#{information_request.submitter_name},\n\nThank you for your request for information on behalf of #{information_request.patient_name}.\n\nThank you,\nAvis Griffith" %>
+              <tr>
+                <td><%= link_to "View", information_request %>
+                <td><%= information_request.submitter_name %></td>
+                <td><%= information_request.patient_name %></td>
+                <td><%= mail_to "#{information_request.email_address}", "#{information_request.email_address}", 
+                :subject => 'CCC Information Request Follow-Up', :body => msg_body %></td>
+                <td><%= information_request.phone_number %></td>
+                <td><%= information_request.request_timestamp %></td>
+                <td><%= link_to 'Destroy', information_request, confirm: 'Are you sure?', method: :delete %></td>
+              </tr>
+            <% end %>
+            </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
