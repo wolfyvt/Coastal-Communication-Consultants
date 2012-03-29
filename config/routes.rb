@@ -1,6 +1,6 @@
 CoastalCommunicationConsultants::Application.routes.draw do
   resources :faqs
-
+  
   resources :information_requests
 
   # The priority is based upon order of creation:
@@ -18,6 +18,7 @@ CoastalCommunicationConsultants::Application.routes.draw do
   match '/resources' => 'site#resources'
   match '/services' => 'site#services'
   match '/requestInfo' => 'site#process_info_request'
+  match '/frequently_asked' => 'site#frequently_asked'
   match '/map' => 'site#map'
   match '/updatefollowup' => 'information_requests#updatefollowup'
   

@@ -28,12 +28,12 @@
           
           <ul class="nav">
               <li class="active ccc-nav-active">
-                <a href="#">Home</a>
+                <%= link_to "Home", root_path %>
               </li>
               <li><%= link_to "Services", services_path %></li>
               <li><%= link_to "About the Practice", about_path %></li>
               <li><a href="#">Resources</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><%= link_to "FAQ", frequently_asked_path %></li>
               <li><a href="#">Contact</a></li>
             </ul>
         </div>

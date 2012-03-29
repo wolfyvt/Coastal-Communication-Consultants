@@ -9,4 +9,6 @@ class SiteController < ApplicationController
 #    redirect_to root_path( notice: "Thank You!  Your request for information has been successfully processed.")
 #  end
 
+  def frequently_asked
+  end
 end
