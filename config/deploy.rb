@@ -12,7 +12,7 @@ set :user, "lee"
 set :domain, "coastalcommunicationconsultants.com"
 set :application, "CoastalCommunicationConsultants"
 set :repository,  "git@github.com:leestubbs/Coastal-Communication-Consultants.git"
-set :deploy_to, "/var/www/ccc/sandbox/"
+set :deploy_to, "/var/www/ccc/"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -29,7 +29,7 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 namespace :deploy do
    desc "Cause Passenger to restart applicaton."
    task :restart do
-     run "touch #{deploy_to}tmp/restart.txt"
+     run "touch #{deploy_to}current/tmp/restart.txt"
    end
  end
 
