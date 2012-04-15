@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <html>
 <head>
-  <title>Coastal Communication Consultants</title>
+  <%= yield :head %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -53,7 +53,6 @@
       </div>
   </div>  
  
-
   <%= yield %>
 </div>
 
