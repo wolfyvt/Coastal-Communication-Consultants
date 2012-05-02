@@ -11,4 +11,16 @@
     <loc>http://www.coastalcommunicationconsultants.com/services</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>http://www.coastalcommunicationconsultants.com/frequently_asked</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.coastalcommunicationconsultants.com/resources</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>http://www.coastalcommunicationconsultants.com/contact</loc>
+    <priority>1.0</priority>
+  </url>
 </urlset>

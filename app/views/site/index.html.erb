@@ -40,7 +40,7 @@
             </ul>
          </div> 
          </h4>
-         <%= link_to "More Detail...", services_path %>
+         <%= link_to "Learn More &raquo".html_safe, services_path %>
      </div>
    </div>
    <div class="span4">
@@ -59,7 +59,7 @@
 
        </div> 
        </h4>
-       <%= link_to "Explanation of Services...", services_path %>
+       <%= link_to "Explanation of Services &raquo".html_safe, services_path %>
      </div> 
    </div>
    <div class="span4">
@@ -67,8 +67,7 @@
        <div class="ccc-list-head">
          <h2>Request Information:</h2>
        </div>
-       
-       
+              
        <%= render :partial => "information_requests/form", :locals => {:information_request => InformationRequest.new} %>
        
     </div>

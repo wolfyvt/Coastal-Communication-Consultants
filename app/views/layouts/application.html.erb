@@ -8,7 +8,9 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -40,14 +42,12 @@
           <a class="brand" href="/" ><%= image_tag("CCC-brand.png") %></a>
           
           <ul class="nav">
-              <li class="active ccc-nav-active">
-                <%= link_to "Home", root_path %>
-              </li>
+              <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "Services", services_path %></li>
               <li><%= link_to "About the Practice", about_path %></li>
-              <li><a href="#">Resources</a></li>
-              <li><%= link_to "FAQ", frequently_asked_path %></li>
-              <li><a href="#">Contact</a></li>
+              <!-- <li><a href="#">Resources</a></li> -->
+              <!-- <li><%= link_to "FAQ", frequently_asked_path %></li> -->
+              <li><%= link_to "Contact", contact_path %></li>
             </ul>
         </div>
       </div>
@@ -58,9 +58,12 @@
 
 </body>
 
-<footer>
-  <div class="container">
-    Copyright &copy; <%= Time.now.year %> Coastal Communication Consultants.  
+<footer class="ccc-footer">
+  <div>
+    Copyright &copy; <%= Time.now.year %> Coastal Communication Consultants
+    <table class="ccc-footer-table" align="center">
+      <tr><td>Avis Griffith</td><td>|</td><td>843.822.5244</td><td>|</td><td>coastal.communication@gmail.com</td></tr>      
+    </table>
   </div>
 </footer>
 </html>
