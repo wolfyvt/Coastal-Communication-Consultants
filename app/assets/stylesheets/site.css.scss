@@ -13,6 +13,34 @@ body {
   background-repeat: repeat-x;
 }
 
+// Override "brand" hover properties to ensure transparency
+.navbar .brand:hover {
+  text-decoration: none;
+  background-color: transparent;  
+}
+
+// Footer on the bottom of each page
+.ccc-footer {
+
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.ccc-footer-table {
+  padding: 200px;
+  
+  
+  
+}
+
+// Hover properties for navigation bar
+.navbar .nav > li > a:hover {
+  background-color: darken($cccblue, 45%);
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .ccc-sub-title {
   position: relative;
 }

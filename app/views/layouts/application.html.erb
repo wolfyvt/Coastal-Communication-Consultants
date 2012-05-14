@@ -4,11 +4,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <html>
 <head>
-  <title>Coastal Communication Consultants</title>
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+     
+  <%= yield :head %>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+    
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -26,7 +28,7 @@
 <body>
 
 <div class="container">
-  <center><%= image_tag("ccc-logo-extended.png") %></center>
+  <center><%= image_tag("ccc-logo.png") %></center>
  
   <div class="ccc-sub-title">
       <h1>Speech Language Therapy in Charleston, SC</h1>
@@ -40,28 +42,28 @@
           <a class="brand" href="/" ><%= image_tag("CCC-brand.png") %></a>
           
           <ul class="nav">
-              <li class="active ccc-nav-active">
-                <%= link_to "Home", root_path %>
-              </li>
+              <li><%= link_to "Home", root_path %></li>
               <li><%= link_to "Services", services_path %></li>
               <li><%= link_to "About the Practice", about_path %></li>
-              <li><a href="#">Resources</a></li>
-              <li><%= link_to "FAQ", frequently_asked_path %></li>
-              <li><a href="#">Contact</a></li>
+              <!-- <li><a href="#">Resources</a></li> -->
+              <!-- <li><%= link_to "FAQ", frequently_asked_path %></li> -->
+              <li><%= link_to "Contact", contact_path %></li>
             </ul>
         </div>
       </div>
   </div>  
  
-
   <%= yield %>
 </div>
 
 </body>
 
-<footer>
-  <div class="container">
-    Copyright &copy; <%= Time.now.year %> Coastal Communication Consultants.  
+<footer class="ccc-footer">
+  <div align="center">
+    Copyright &copy; <%= Time.now.year %> Coastal Communication Consultants
+    <table class="ccc-footer-table" align="center">
+      <tr><td>Avis Griffith</td><td>|</td><td>843.822.5244</td><td>|</td><td>coastal.communication@gmail.com</td></tr>      
+    </table>
   </div>
 </footer>
 </html>
