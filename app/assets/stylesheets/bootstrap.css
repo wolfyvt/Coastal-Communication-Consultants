@@ -2407,7 +2407,7 @@ button.btn.small, input[type="submit"].btn.small {
   height: auto;
 }
 .navbar .brand:hover {
-  text-decoration: none;
+  text-decoration: none;  
 }
 .navbar .brand {
   float: left;
