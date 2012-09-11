@@ -12,6 +12,7 @@
                 <th>Patient name</th>
                 <th>Email address</th>
                 <th>Phone number</th>
+                <th>Description</th>
                 <th>Date/Time of Request</th>
                 <th></th>
               </tr>
@@ -25,7 +26,8 @@
                 <td><%= mail_to "#{information_request.email_address}", "#{information_request.email_address}", 
                 :subject => 'CCC Information Request Follow-Up', :body => msg_body %></td>
                 <td><%= information_request.phone_number %></td>
-                <td><%= information_request.request_timestamp %></td>
+                <td><%= information_request.description %></td>
+                <td><%= information_request.created_at %></td>
                 <td><%= link_to 'Destroy', information_request, confirm: 'Are you sure?', method: :delete %></td>
               </tr>
             <% end %>

@@ -1,9 +1,30 @@
-<blockquote>
-  <h2>Phone</h2>
-  <p>843.822.5244</p>
-</blockquote>
+<div class="row">
+  
+    
+  <div class="span8">
+    <div class="well">
+      <h2>Phone</h2>
+      <p>843.822.5244</p>
+      <h2>E-Mail</h2>
+      <p>avis@coastalcommunicationconsultants.com</p>
+      <h2>Location</h2>
+      <p>Please contact for information.</p>
+      <%= image_tag("on_couch.jpg") %>
+    </div>
+  </div>
+ 
+    
+  
+  
+  
+  <div class="span4 pull-right">
+    <div class="well">
+    <%= render :partial => "information_requests/form", :locals => {:information_request => InformationRequest.new} %>
+    </div>
+  </div>
+  
 
-<blockquote>
-  <h2>E-Mail</h2>
-  <p>coastal.communication@gmail.com</p>
-</blockquote>
+ 
+</div>
+
+

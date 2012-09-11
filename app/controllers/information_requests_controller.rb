@@ -42,7 +42,6 @@ class InformationRequestsController < ApplicationController
   # POST /information_requests.json
   def create
     @information_request = InformationRequest.new(params[:information_request])
-    @information_request.request_timestamp = Time.now
 
     respond_to do |format|
       if @information_request.save

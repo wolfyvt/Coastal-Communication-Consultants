@@ -28,8 +28,12 @@
     Contact Phone Number:<br />
     <%= f.telephone_field :phone_number %>
   </div>
+    <div class="field">
+    Reason for Comtact / Description of Issues:<br />
+    <%= f.text_area :description, :rows => 6 %>
+  </div>
   </h5>
   <div class="actions">
-    <%= f.submit :onclick => "return confirm('This will send the form information to CCC in order to contact you.  Please confirm this action.')" %>
+    <%= f.submit :class => "btn btn-primary", :onclick => "return confirm('This will send the form information to CCC in order to contact you.  Please confirm this action.')" %>
   </div>
 <% end %>
