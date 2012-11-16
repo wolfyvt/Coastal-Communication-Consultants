@@ -5,8 +5,8 @@ default_run_options[:pty] = true
 set :rails_env, :development
 
 # Set domain user name (not sure how to ask during deployment)
-set :user, "lee"
-#set :user, "adam"
+#set :user, "lee"
+set :user, "adam"
 
 # Set Domain and Repository Configurations
 set :domain, "coastalcommunicationconsultants.com"
