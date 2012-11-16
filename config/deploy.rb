@@ -11,7 +11,7 @@ set :user, "lee"
 # Set Domain and Repository Configurations
 set :domain, "coastalcommunicationconsultants.com"
 set :application, "CoastalCommunicationConsultants"
-set :repository,  "git@github.com:leestubbs/Coastal-Communication-Consultants.git"
+set :repository,  "git@github.com:wolfyvt/Coastal-Communication-Consultants.git"
 set :deploy_to, "/var/www/ccc/"
 
 set :scm, :git
