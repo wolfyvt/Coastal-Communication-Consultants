@@ -1,5 +1,5 @@
 class InfoRequestConfirmation < ActionMailer::Base
-  default from: "Alcor Admin <admin@alcorsoftware.com>"
+  default from: "Avis Griffith <avis@coastalcommunicationconsultants.com>"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

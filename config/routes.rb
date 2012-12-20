@@ -1,4 +1,6 @@
 CoastalCommunicationConsultants::Application.routes.draw do
+  resources :resources
+
   resources :faqs
   
   resources :information_requests
@@ -15,7 +17,7 @@ CoastalCommunicationConsultants::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
   match '/about' => 'site#about'
   match '/contact' => 'site#contact'
-  match '/resources' => 'site#resources'
+  match '/parent_resources' => 'site#resources'
   match '/services' => 'site#services'
   match '/requestInfo' => 'site#process_info_request'
   match '/frequently_asked' => 'site#frequently_asked'
