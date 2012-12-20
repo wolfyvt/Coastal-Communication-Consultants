@@ -1,0 +1,17 @@
+<%= form_tag do %>
+ <table>
+   <tr>
+     <td>Username:</td>
+     <td><%= text_field("user", "name") %></td>
+   </tr>
+   <tr>
+     <td>Password:</td>
+     <td><%= password_field("user", "password") %></td>
+   </tr>
+   <tr>
+     <td></td>
+     <td><%= submit_tag "Submit", :class => 'btn btn-primary' %></td>
+   </tr>
+ </table>
+
+<% end %>

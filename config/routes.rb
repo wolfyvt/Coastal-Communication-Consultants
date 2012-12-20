@@ -15,6 +15,8 @@ CoastalCommunicationConsultants::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  match '/login' => 'ldap#login'
+  match '/logout' => 'ldap#logout'
   match '/about' => 'site#about'
   match '/contact' => 'site#contact'
   match '/parent_resources' => 'site#resources'
