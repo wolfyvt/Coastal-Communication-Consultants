@@ -1,6 +1,9 @@
+<% content_for :head do %>
+  <title>Contact</title>
+  <meta name="description" content="Contact Avis today to discuss any of your speech and language therapy questions.">
+<% end %>
+
 <div class="row">
-  
-    
   <div class="span8">
     <div class="well">
       <h2>Phone</h2>
@@ -12,19 +15,11 @@
       <%= image_tag("on_couch.jpg") %>
     </div>
   </div>
- 
-    
-  
-  
-  
   <div class="span4 pull-right">
     <div class="well">
     <%= render :partial => "information_requests/form", :locals => {:information_request => InformationRequest.new} %>
     </div>
   </div>
-  
-
- 
 </div>
 
 
