@@ -2,7 +2,7 @@
 default_run_options[:pty] = true
 
 # Set Rails environment test, development, production
-set :rails_env, :development
+set :rails_env, :production
 
 # Set domain user name (not sure how to ask during deployment)
 #set :user, "lee"
