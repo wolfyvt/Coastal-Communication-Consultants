@@ -25,8 +25,6 @@ CoastalCommunicationConsultants::Application.configure do
     user_name: "admin@alcorsoftware.com",
     password: "secret80",
     enable_startttls_auto: true
-    
-    
   }
 
   # Print deprecation notices to the Rails logger
