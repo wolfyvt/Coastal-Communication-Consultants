@@ -1,3 +1,7 @@
+# ALS deployment notes:
+# For production pre compilation of assets use the following from the root project directory (may need to run as www-data for permissions):
+# bundle exec rake assets:precompile
+
 # This is often needed to ask for passwords...
 default_run_options[:pty] = true
 
@@ -41,7 +45,3 @@ set :deploy_via, :remote_cache
 
 # Turn on verbose mode for software configuration management
 set :scm_verbose, true
-
-
-
-
