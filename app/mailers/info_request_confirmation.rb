@@ -11,6 +11,6 @@ class InfoRequestConfirmation < ActionMailer::Base
    
     puts @information_request.email_address
     #@information_request.email_address
-    mail to: "#{@information_request.email_address}", bcc: "adam.wolf@alcorsoftware.com", subject: "CCC Information Request"
+    mail to: "#{@information_request.email_address}", bcc: "avis@coastalcommunicationconsultants.com", subject: "CCC Information Request"
   end
 end

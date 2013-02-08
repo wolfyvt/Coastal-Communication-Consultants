@@ -55,10 +55,10 @@ CoastalCommunicationConsultants::Application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "alcorsoftware.com",
+    domain: "coastalcommunicationconsultants.com",
     authentication: "login",
-    user_name: "admin@alcorsoftware.com",
-    password: "secret80",
+    user_name: "info@coastalcommunicationconsultants.com",
+    password: "",
     enable_startttls_auto: true
   }
   
