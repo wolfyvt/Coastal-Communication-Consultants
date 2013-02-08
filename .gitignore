@@ -8,7 +8,7 @@
 /.bundle
 
 # Ignore environment configurations
-/config/environments/*.rb
+#/config/environments/*.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
