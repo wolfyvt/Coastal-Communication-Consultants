@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :answer %><br />
-    <%= f.text_field :answer %>
+    <%= f.text_area :answer, :class => "tinymce" %>
+    <%= tinymce %>
   </div>
   <% if params[:action] == "edit" %>
   <div class="field">
