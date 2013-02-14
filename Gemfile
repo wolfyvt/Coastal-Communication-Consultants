@@ -9,6 +9,7 @@ require 'rubygems'
 gem 'sqlite3'
 gem 'net-ldap', :require => "net/ldap"
 gem 'activeldap'
+gem 'bcrypt-ruby'
 
 # Gems used only for assets and not required
 # in production environments by default.

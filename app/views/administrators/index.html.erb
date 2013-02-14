@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="well">
+
+        <h1>Listing administrators</h1>
+        
+        <h3>WARNING!!!! Cannot Destroy account you are logged in under!!</h3>
+
+        <table class="table table-bordered table-striped">
+          <tr>
+            <th>Username</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+
+        <% @administrators.each do |administrator| %>
+          <tr>
+            <td><%= administrator.username %></td>
+            <td><%= link_to 'Show', administrator %></td>
+            <td><%= link_to 'Edit', edit_administrator_path(administrator) %></td>
+            <td><%= link_to_unless(administrator.id == session[:admin_id], 'Destroy', administrator, confirm: 'Are you sure?', method: :delete) %></td>
+          </tr>
+        <% end %>
+        </table>
+        <%= link_to 'New Administrator', new_administrator_path %><br /><br />
+        <%= link_to "Administration Main", admin_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<br />
+
+

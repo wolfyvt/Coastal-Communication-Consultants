@@ -1,8 +1,15 @@
 CoastalCommunicationConsultants::Application.routes.draw do
-  resources :resources
+  match '/admin' => "admin#index"
 
+  controller :sessions do 
+  #  get 'login' => :new
+ #   post 'login' => :create
+  #  delete 'logout' => :destroy
+  end
+
+  resources :administrators
+  resources :resources
   resources :faqs
-  
   resources :information_requests
 
   # The priority is based upon order of creation:
@@ -15,8 +22,8 @@ CoastalCommunicationConsultants::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-  match '/login' => 'ldap#login'
-  match '/logout' => 'ldap#logout'
+  match '/login' => 'sessions#login'
+  match '/logout' => 'sessions#logout'
   match '/about' => 'site#about'
   match '/contact' => 'site#contact'
   match '/parent_resources' => 'site#resources'

@@ -1,0 +1,16 @@
+<%= form_tag do %>
+  <table>
+    <tr>
+      <td>Username:</td>
+      <td><%= text_field_tag :username, params[:username] %></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><%= password_field_tag :password, params[:password] %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><%= submit_tag "Submit", :class => 'btn btn-primary' %></td>
+    </tr>
+  </table>
+<% end -%>

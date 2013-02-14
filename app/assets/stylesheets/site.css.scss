@@ -13,6 +13,10 @@ body {
   background-repeat: repeat-x;
 }
 
+#logout-a a {
+  color: white;
+}
+
 // Override "brand" hover properties to ensure transparency
 .navbar .brand:hover {
   text-decoration: none;

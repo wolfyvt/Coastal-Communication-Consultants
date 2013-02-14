@@ -1,5 +1,5 @@
 class InfoRequestConfirmation < ActionMailer::Base
-  default from: "Avis Griffith <avis@coastalcommunicationconsultants.com>"
+  default from: "Avis Griffith <info@coastalcommunicationconsultants.com>"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -8,9 +8,7 @@ class InfoRequestConfirmation < ActionMailer::Base
   #
   def requested(information_request)
     @information_request = information_request
-   
-    puts @information_request.email_address
-    #@information_request.email_address
+      
     mail to: "#{@information_request.email_address}", bcc: "avis@coastalcommunicationconsultants.com", subject: "CCC Information Request"
   end
 end

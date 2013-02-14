@@ -27,6 +27,24 @@
 </head>
 <body>
 
+<% if session[:admin_id] %>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner ccc-nav">
+      <div class="container">  
+        <div class="brand">
+          <div class="nav">
+            <div id="logout-a">
+              You are logged in as <%= Administrator.find_by_id(session[:admin_id]).username %>.&nbsp
+             Click <%= link_to "HERE", :action => :logout, :controller => :sessions %> to log out.
+            </div>
+            
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>
+<% end -%>
+
 <div class="container">
   <center><%= image_tag("ccc-logo.png") %></center>
  
@@ -52,6 +70,10 @@
         </div>
       </div>
   </div>  
+  
+  <% if notice != nil %>
+  <p class="alert"><%= notice %></p>
+  <% end %>
  
   <%= yield %>
 </div>

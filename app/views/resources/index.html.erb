@@ -1,31 +1,42 @@
-<h1>Listing resources</h1>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="well">
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Website</th>
-    <th>Phone</th>
-    <th>Order</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <h1>Listing Resources</h1>
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Website</th>
+                <th>Phone</th>
+                <th>Order</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
 
-<% @resources.each do |resource| %>
-  <tr>
-    <td><%= resource.title %></td>
-    <td><%= resource.description %></td>
-    <td><%= resource.website %></td>
-    <td><%= resource.phone %></td>
-    <td><%= resource.order_index %></td>
-    <td><%= link_to 'Show', resource %></td>
-    <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-    <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+            <% @resources.each do |resource| %>
+              <tr>
+                <td><%= resource.title %></td>
+                <td><%= resource.description %></td>
+                <td><%= resource.website %></td>
+                <td><%= resource.phone %></td>
+                <td><%= resource.order_index %></td>
+                <td><%= link_to 'Show', resource %></td>
+                <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+                <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+              </tr>
+            <% end %>
+            </table>
+            <%= link_to 'New Resource', new_resource_path %><br /><br />
+            <%= link_to "Administration Main", admin_path %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br />
 
-<%= link_to 'New Resource', new_resource_path %>
+
+
+
