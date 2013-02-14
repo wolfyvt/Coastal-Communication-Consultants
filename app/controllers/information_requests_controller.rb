@@ -1,4 +1,7 @@
 class InformationRequestsController < ApplicationController
+  skip_before_filter :authorize, only: :create
+
+
   # GET /information_requests
   # GET /information_requests.json
   def index
