@@ -2,6 +2,9 @@
 # For production pre compilation of assets use the following from the root project directory (may need to run as www-data for permissions):
 # bundle exec rake assets:precompile
 
+# Use agent forwarding to use local github keys
+ssh_options[:forward_agent] = true
+
 # This is often needed to ask for passwords...
 default_run_options[:pty] = true
 
