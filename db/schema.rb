@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130214014336) do
+ActiveRecord::Schema.define(:version => 20130215155754) do
 
   create_table "administrators", :force => true do |t|
     t.string   "username"
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(:version => 20130214014336) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "order_index"
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.text     "testimonial_text"
+    t.string   "written_by"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
 end

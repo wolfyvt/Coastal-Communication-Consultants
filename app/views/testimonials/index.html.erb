@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <div class="well">
+
+        <h1>Listing testimonials</h1>
+
+          <table class="table table-bordered table-striped">
+            <tr>
+              <th>Testimonial text</th>
+              <th>Written by</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+
+          <% @testimonials.each do |testimonial| %>
+            <tr>
+              <td><%= raw testimonial.testimonial_text %></td>
+              <td><%= testimonial.written_by %></td>
+              <td><%= link_to 'Show', testimonial %></td>
+              <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
+              <td><%= link_to 'Destroy', testimonial, confirm: 'Are you sure?', method: :delete %></td>
+            </tr>
+          <% end %>
+          </table>
+          <br />
+
+          <%= link_to 'New Testimonial', new_testimonial_path %><br /><br />
+          <%= link_to "Administration Main", admin_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

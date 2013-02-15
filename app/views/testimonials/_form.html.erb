@@ -1,0 +1,26 @@
+<%= form_for(@testimonial) do |f| %>
+  <% if @testimonial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@testimonial.errors.count, "error") %> prohibited this testimonial from being saved:</h2>
+
+      <ul>
+      <% @testimonial.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :testimonial_text %><br />
+    <%= f.text_area :testimonial_text, class: :tinymce %>
+    <%= tinymce %><br />
+  </div>
+  <div class="field">
+    <%= f.label :written_by %><br />
+    <%= f.text_field :written_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
