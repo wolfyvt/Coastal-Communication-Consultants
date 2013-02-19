@@ -10,6 +10,8 @@
   <%= @testimonial.written_by %>
 </p>
 
+<p><b>Order:</b><%= @testimonial.order_index %></p>
+
 
 <%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
 <%= link_to 'Back', testimonials_path %>

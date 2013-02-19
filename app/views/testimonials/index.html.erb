@@ -9,6 +9,7 @@
             <tr>
               <th>Testimonial text</th>
               <th>Written by</th>
+              <th>Order</th>
               <th></th>
               <th></th>
               <th></th>
@@ -18,6 +19,7 @@
             <tr>
               <td><%= raw testimonial.testimonial_text %></td>
               <td><%= testimonial.written_by %></td>
+              <td><%= testimonial.order_index %></td>
               <td><%= link_to 'Show', testimonial %></td>
               <td><%= link_to 'Edit', edit_testimonial_path(testimonial) %></td>
               <td><%= link_to 'Destroy', testimonial, confirm: 'Are you sure?', method: :delete %></td>

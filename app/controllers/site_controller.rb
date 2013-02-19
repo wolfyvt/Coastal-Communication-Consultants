@@ -3,6 +3,8 @@
 class SiteController < ApplicationController
 
   def testimonials
-    @testimonials = Testimonial.all
+    @testimonials = Testimonial.order(:order_index)
   end
 end
+
+

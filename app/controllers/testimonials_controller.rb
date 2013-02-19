@@ -2,7 +2,7 @@ class TestimonialsController < ApplicationController
   # GET /testimonials
   # GET /testimonials.json
   def index
-    @testimonials = Testimonial.all
+    @testimonials = Testimonial.order(:order_index)
 
     respond_to do |format|
       format.html # index.html.erb

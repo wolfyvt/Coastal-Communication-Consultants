@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130215155754) do
+ActiveRecord::Schema.define(:version => 20130219230146) do
 
   create_table "administrators", :force => true do |t|
     t.string   "username"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20130215155754) do
     t.string   "written_by"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "order_index"
   end
 
 end

@@ -20,6 +20,12 @@
     <%= f.label :written_by %><br />
     <%= f.text_field :written_by %>
   </div>
+  <% if params[:action] == "edit" %>
+  <div class="field">
+    <%= f.label :order_index %><br />
+    <%= f.text_field :order_index %>
+  </div>
+  <% end -%>
   <div class="actions">
     <%= f.submit %>
   </div>
