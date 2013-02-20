@@ -44,9 +44,9 @@ namespace :deploy do
    desc "Create symbolic link to production database."
    run "ln -s /var/www/ccc/db/production.sqlite3 production.sqlite3"
    
-   desc "Updating owner and permissions."
-   run "chown www-data:www-data -R /var/www/ccc"
-   run "chmod 755 -R /var/www/ccc"
+#   desc "Updating owner and permissions."
+#   run "chown www-data:www-data -R /var/www/ccc"
+#   run "chmod 755 -R /var/www/ccc"
   
    desc "Cause Passenger to restart applicaton."
    task :restart do
