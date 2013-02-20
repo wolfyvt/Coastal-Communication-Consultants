@@ -37,9 +37,11 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 
 namespace :deploy do
   
+  task :deploy do 
    desc "Backing up production database."
    t=Time.now
    run "cp /var/www/ccc/db/production.sqlite3 /var/www/ccc/db/backup/#{t.year}-#{t.month}-#{t.day}_#{t.hour}:#{t.min}:#{t.sec}_db.sqlite3"
+  end
   
 #   desc "Create symbolic link to production database."
 #   run "ln -s /var/www/ccc/db/production.sqlite3 production.sqlite3"
