@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  testimonial_text: MyText
+  written_by: MyString
+
+two:
+  testimonial_text: MyText
+  written_by: MyString

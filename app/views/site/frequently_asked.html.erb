@@ -10,7 +10,7 @@
       <% @faq_list = Faq.order(:order_index) %>
       <% @faq_list.each do |faq| %>
         <h3><%= faq.question %>?</h3>
-        <p class="ccc-p"><%= faq.answer %></p>
+        <p class="ccc-p"><%= raw faq.answer %></p>
       <% end %>        
       
     </div>

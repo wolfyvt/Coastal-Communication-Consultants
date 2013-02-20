@@ -123,3 +123,10 @@ list-style-image: url('R_arrow2.png');
 .ccc-p {
   font-size: 18px;
 }
+
+.ccc-test-author {
+  padding-left:5em;
+  font-weight:bold;
+  font-size:15px;
+  color: darken($cccblue, 35%);
+}

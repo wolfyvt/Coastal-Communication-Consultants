@@ -1,4 +1,6 @@
 CoastalCommunicationConsultants::Application.routes.draw do
+  resources :testimonials
+
   match '/admin' => "admin#index"
 
   controller :sessions do 
@@ -24,6 +26,7 @@ CoastalCommunicationConsultants::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
   match '/login' => 'sessions#login'
   match '/logout' => 'sessions#logout'
+  match '/patient_testimonials' => 'site#testimonials'
   match '/about' => 'site#about'
   match '/contact' => 'site#contact'
   match '/parent_resources' => 'site#resources'

@@ -36,6 +36,7 @@
             <div id="logout-a">
               You are logged in as <%= Administrator.find_by_id(session[:admin_id]).username %>.&nbsp
              Click <%= link_to "HERE", :action => :logout, :controller => :sessions %> to log out.
+             Click <%= link_to "HERE", admin_path %> to visit the Administraion Main Page.
             </div>
             
           </div>
@@ -65,6 +66,7 @@
               <li><%= link_to "About the Practice", about_path %></li>
               <li><%= link_to "Resources", parent_resources_path %></li>
               <li><%= link_to "FAQ", frequently_asked_path %></li>
+          <li><%= link_to "Testimonials", patient_testimonials_path %></li> 
               <li><%= link_to "Contact", contact_path %></li>
             </ul>
         </div>

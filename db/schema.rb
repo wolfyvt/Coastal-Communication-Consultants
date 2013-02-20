@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213021614) do
+ActiveRecord::Schema.define(:version => 20130219230146) do
 
   create_table "administrators", :force => true do |t|
     t.string   "username"
@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(:version => 20130213021614) do
 
   create_table "faqs", :force => true do |t|
     t.string   "question"
-    t.string   "answer"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.text     "answer",      :limit => 255
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "order_index"
   end
 
@@ -45,6 +45,14 @@ ActiveRecord::Schema.define(:version => 20130213021614) do
     t.string   "phone"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "order_index"
+  end
+
+  create_table "testimonials", :force => true do |t|
+    t.text     "testimonial_text"
+    t.string   "written_by"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "order_index"
   end
 

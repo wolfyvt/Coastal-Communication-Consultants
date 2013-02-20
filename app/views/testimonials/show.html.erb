@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Testimonial text:</b>
+  <%= raw @testimonial.testimonial_text %>
+</p>
+
+<p>
+  <b>Written by:</b>
+  <%= @testimonial.written_by %>
+</p>
+
+<p><b>Order:</b><%= @testimonial.order_index %></p>
+
+
+<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
+<%= link_to 'Back', testimonials_path %>

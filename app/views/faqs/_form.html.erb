@@ -13,11 +13,12 @@
 
   <div class="field">
     <%= f.label :question %><br />
-    <%= f.text_field :question %>
+    <%= f.text_field :question %>&nbsp;NOTE!! Do not add '?' after your question text.  The page will do that for you.
   </div>
   <div class="field">
     <%= f.label :answer %><br />
-    <%= f.text_field :answer %>
+    <%= f.text_area :answer, :class => "tinymce" %>
+    <%= tinymce %>
   </div>
   <% if params[:action] == "edit" %>
   <div class="field">
