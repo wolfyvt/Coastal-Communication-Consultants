@@ -14,7 +14,7 @@ ssh_options[:forward_agent] = true
 set :rails_env, :production
 
 # Set domain user name (not sure how to ask during deployment)
-#set :user, "lee"
+set :user, "lee"
 #set :user, "adam"
 
 # Set Domain and Repository Configurations
