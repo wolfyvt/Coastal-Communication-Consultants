@@ -40,8 +40,8 @@ namespace :deploy do
   t=Time.now
   run "cp /var/www/ccc/db/production.sqlite3 /var/www/ccc/db/backup/#{t.year}-#{t.month}-#{t.day}_#{t.hour}:#{t.min}:#{t.sec}_db.sqlite3"
   
-  desc "Create symbolic link to production database."
-  run "ln -s /var/www/ccc/db/production.sqlite3 production.sqlite3"
+  #desc "Create symbolic link to production database."
+  #run "ln -s /var/www/ccc/db/production.sqlite3 production.sqlite3"
     
 #   desc "Updating owner and permissions."
 #   run "chown www-data:www-data -R /var/www/ccc"
