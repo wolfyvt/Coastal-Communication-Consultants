@@ -2,8 +2,6 @@
 # For production pre compilation of assets use the following from the root project directory (may need to run as www-data for permissions):
 # bundle exec rake assets:precompile
 
-desc "Starting deployment..."
-
 # This is often needed to ask for passwords...
 default_run_options[:pty] = true
 
@@ -14,7 +12,8 @@ ssh_options[:forward_agent] = true
 set :rails_env, :production
 
 # Set domain user name (not sure how to ask during deployment)
-set :user, "lee"
+set :user, "deploy"
+#set :user, "lee"
 #set :user, "adam"
 
 # Set Domain and Repository Configurations
