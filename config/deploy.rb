@@ -14,7 +14,7 @@ set :user, "www-data"
 # Set Domain and Repository Configurations
 set :domain, "coastalcommunicationconsultants.com"
 set :application, "CoastalCommunicationConsultants"
-set :repository,  "ssh://git@alcorsoftware.com/git/Coastal-Communication-Consultants.git"
+set :repository,  "git@github.com:wolfyvt/Coastal-Communication-Consultants.git"
 set :deploy_to, "/var/www/ccc/"
 
 set :scm, :git
