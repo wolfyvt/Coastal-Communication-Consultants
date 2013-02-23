@@ -38,11 +38,11 @@ namespace :deploy do
   
   desc "Backing up production database."
   t=Time.now
-  run "cp /var/www/ccc/db/production.sqlite3 /var/www/ccc/db/backup/#{t.year}-#{t.month}-#{t.day}_#{t.hour}:#{t.min}:#{t.sec}_db.sqlite3"
+  run "cp #{deploy_to}db/production.sqlite3 #{deploy_to}db/backup/#{t.year}-#{t.month}-#{t.day}_#{t.hour}:#{t.min}:#{t.sec}_db.sqlite3"
   
   desc "Create symbolic link to production database."
-  task :symlink
-    run "ln -s /var/www/ccc/db/production.sqlite3 /var/www/ccc/current/db/production.sqlite3"
+  task :after_symlink
+    run "ln -s #{deploy_to}db/production.sqlite3 #{deploy_to}current/db/production.sqlite3"
   end
         
    desc "Cause Passenger to restart applicaton."
