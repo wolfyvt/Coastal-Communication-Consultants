@@ -14,7 +14,7 @@ set :user, "www-data"
 # Set Domain and Repository Configurations
 set :domain, "coastalcommunicationconsultants.com"
 set :application, "CoastalCommunicationConsultants"
-set :repository,  "git@github.com:wolfyvt/Coastal-Communication-Consultants.git"
+set :repository,  "ssh://git@alcorsoftware.com/git/Coastal-Communication-Consultants.git"
 set :deploy_to, "/var/www/ccc/"
 
 set :scm, :git
@@ -29,8 +29,6 @@ role :db,  domain, :primary => true # This is where Rails migrations will run
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-
-
 namespace :deploy do
   
   desc "Backs up production db."
@@ -44,6 +42,12 @@ namespace :deploy do
   task :create_db_symlink do
     puts "Create symbolic link for production sqlite3 database."
     run "ln -s #{deploy_to}db/production.sqlite3 #{deploy_to}current/db/production.sqlite3"
+  end
+  
+  desc "Runs database migration on db."
+  task :migrate_db do
+    puts "Migrating #{rails_env} database..."
+    run "cd #{deploy_to}current; rake db:migrate RAILS_ENV=#{rails_env}"
   end
   
   desc "Precompiles all assets for project."
@@ -70,5 +74,6 @@ set :scm_verbose, true
 # Setup task execution steps
 before "deploy:update", "deploy:backup_sqlite3_db"
 after  "deploy:create_symlink", "deploy:create_db_symlink"
+after  "deploy:create_db_symlink", "deploy:migrate_db"
 before "deploy:restart", "deploy:precompile_assets"
 
