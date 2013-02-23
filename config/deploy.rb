@@ -12,8 +12,8 @@ ssh_options[:forward_agent] = true
 set :rails_env, :production
 
 # Set domain user name (not sure how to ask during deployment)
-#set :user, "deploy"
-set :user, "lee"
+set :user, "www-data"
+#set :user, "lee"
 #set :user, "adam"
 
 # Set Domain and Repository Configurations
@@ -40,13 +40,11 @@ namespace :deploy do
   t=Time.now
   run "cp /var/www/ccc/db/production.sqlite3 /var/www/ccc/db/backup/#{t.year}-#{t.month}-#{t.day}_#{t.hour}:#{t.min}:#{t.sec}_db.sqlite3"
   
-  #desc "Create symbolic link to production database."
-  #run "ln -s /var/www/ccc/db/production.sqlite3 production.sqlite3"
-    
-#   desc "Updating owner and permissions."
-#   run "chown www-data:www-data -R /var/www/ccc"
-#   run "chmod 755 -R /var/www/ccc"
-  
+  desc "Create symbolic link to production database."
+  task :symlink
+    run "ln -s /var/www/ccc/db/production.sqlite3 /var/www/ccc/current/db/production.sqlite3"
+  end
+        
    desc "Cause Passenger to restart applicaton."
    task :restart do
      run "touch #{deploy_to}current/tmp/restart.txt"
