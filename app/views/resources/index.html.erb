@@ -20,7 +20,7 @@
               <tr>
                 <td><%= resource.title %></td>
                 <td><%= resource.description %></td>
-                <td><%= resource.website %></td>
+                <td><%= truncate(resource.website, length: 40) %></td>
                 <td><%= resource.phone %></td>
                 <td><%= resource.order_index %></td>
                 <td><%= link_to 'Show', resource %></td>

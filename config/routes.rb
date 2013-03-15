@@ -12,7 +12,12 @@ CoastalCommunicationConsultants::Application.routes.draw do
   resources :administrators
   resources :resources
   resources :faqs
-  resources :information_requests
+  resources :information_requests do
+    member do
+      put :archive
+    end
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -26,6 +31,7 @@ CoastalCommunicationConsultants::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
   match '/login' => 'sessions#login'
   match '/logout' => 'sessions#logout'
+  match '/archived' => 'information_requests#archived'
   match '/patient_testimonials' => 'site#testimonials'
   match '/about' => 'site#about'
   match '/contact' => 'site#contact'

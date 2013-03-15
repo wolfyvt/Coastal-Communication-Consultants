@@ -5,11 +5,20 @@ class InformationRequestsController < ApplicationController
   # GET /information_requests
   # GET /information_requests.json
   def index
-    @information_requests = InformationRequest.all
+    @information_requests = InformationRequest.where("archived = ?", false)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @information_requests }
+    end
+  end
+
+  def archived
+    @information_requests = InformationRequest.where("archived = ?", true)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @test }
     end
   end
 
@@ -27,8 +36,8 @@ class InformationRequestsController < ApplicationController
   # GET /information_requests/new
   # GET /information_requests/new.json
   def new
-    puts "HAHAHAHAHHA"
     @information_request = InformationRequest.new
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -45,6 +54,7 @@ class InformationRequestsController < ApplicationController
   # POST /information_requests.json
   def create
     @information_request = InformationRequest.new(params[:information_request])
+    @information_request.archived = false
 
     respond_to do |format|
       if @information_request.save
@@ -85,5 +95,27 @@ class InformationRequestsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # ARCHIVE /information_requests/1
+  # ARCHIVE /information_requests/1.json
+  def archive
+    puts "================================Begin Archive==============================="
+
+    @information_request = InformationRequest.find(params[:id])
+    @information_request.archived = true
+
+
+    respond_to do |format|
+
+      if @information_request.save
+        format.html { redirect_to information_requests_url, notice: "Information request was successfully archived." }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to information_requests_url, notice: "THERE WAS AN ERROR ARCHIVING THE INFORMATION REQUESTS.  CONTACT ADMINISTRATORS!!" }
+        format.json { head :no_content }
+      end
+    end
+  end
    
 end
+#

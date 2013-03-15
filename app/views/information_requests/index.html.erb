@@ -5,6 +5,7 @@
       <div class="well">
 
         <h1>Listing Information Requests</h1>
+        <%= link_to "View Archived Information Requests", archived_path %><br><br>
             <table class="table table-bordered table-striped">
               <tr>
                 <th>Link</th>
@@ -28,11 +29,12 @@
                 <td><%= information_request.phone_number %></td>
                 <td><%= information_request.description %></td>
                 <td><%= information_request.created_at %></td>
-                <td><%= link_to 'Destroy', information_request, confirm: 'Are you sure?', method: :delete %></td>
+                <td><%= link_to 'Archive', "information_requests/#{information_request.id}/archive", confirm: 'Are you sure?', method: :PUT %></td>
               </tr>
             <% end %>
             </table>
-            
+
+
             <%= link_to "Administration Main", admin_path %>
       </div>
     </div>
